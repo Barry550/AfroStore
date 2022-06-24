@@ -1,8 +1,7 @@
 const mongoose = require('mongoose')
 
 mongoose.connect(
-  'mongodb+srv://doumans:doums6059@cluster0.o1z0f.mongodb.net/?retryWrites=true&w=majority'
-  
+  'mongodb+srv://doumans:doums6059@cluster0.o1z0f.mongodb.net/shopping'
  ,
   {
     useNewUrlParser:true,

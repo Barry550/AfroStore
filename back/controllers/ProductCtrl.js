@@ -55,7 +55,8 @@ const productCtrl = {
       const features = await new APIfeatures(productModel.find(), req.query).filtering().selecting().sorting().pagination()
       const products = await features.query
 
-      res.json({result: {
+      res.json({
+        result: {
         status: "success",
         result: products.length,
         products: products
@@ -199,7 +200,6 @@ const productCtrl = {
     if(!ObjectId.isValid(req.params.id))
     return res.send({error : `ID unknown : ${req.params.id}`})
   
-    
     try {
       return productModel.findByIdAndUpdate(
         req.params.id,
